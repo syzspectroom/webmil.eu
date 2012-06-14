@@ -1,0 +1,68 @@
+//header-rules
+header{
+	@include container;
+	.header{
+		margin-top: 50px;
+		.left-side{
+			@include column(10);
+			.lang-list{
+				ul{
+					li{
+						@include inline-block;
+						a{
+							font-family: 'Marmelad', sans-serif;
+							color: #4d4d4f;
+							text-decoration: underline;
+							&:hover{
+								text-decoration: none;
+							}
+						}
+						a.active{
+							color: #b6b6b6;
+							text-decoration: none;
+						}
+						a.ua{
+							margin-left: 10px;
+						}
+					}
+				}
+			}
+			.slogan{
+				margin-top: 82px;
+				img{
+					width: 389px;
+					height: 171px;
+				}
+			}
+			.menu{
+				ul{
+					margin-top: 25px;
+					li{
+						@include inline-block;
+						margin: 0 30px 0 0;
+						a{
+							color: #4c4d4f;
+							text-decoration: none;
+							font-size: 17px;
+							&:hover{
+								color: $hover-color;
+							}
+						}
+						a.active{
+							color: $hover-color;
+						}
+					}
+				}
+			}
+		}
+		.logo{
+			@include column(9, true);
+			@include prepend(5);
+			a img{
+				width: 331px;
+				height: 323px;
+				float: right;
+			}
+		}
+	}
+}

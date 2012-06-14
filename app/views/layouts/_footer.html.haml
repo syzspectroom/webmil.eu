@@ -1,0 +1,54 @@
+%footer
+  .footer-container
+    .sitemap
+      %h4 Sitemap
+      %ul
+        %li
+          = link_to 'home', root_path
+        %li
+          = link_to 'works', works_path
+        %li
+          = link_to 'team', studio_path
+        %li
+          = link_to 'contacts', contacts_path
+    .resources
+      %h4 Resources
+      %ul
+        %li
+          %a{:href => "#"} facebook
+        %li
+          %a{:href => "#"} twitter
+        %li
+          %a{:href => "#"} RSS feed
+        %li
+          %a{:href => "#"} tumblr
+    .twitter
+      %h4
+        %a.tweet.active{href: '#'} What we're into right now
+        %a.music{href: '#'} What we're listen right now
+      %p 
+        The @namename site we've been working on for @namename1 has won redesign of the year at the UK eCommerce awards. Back slaps all round!
+        %span
+      %span @webmillab
+    .address{itemscope: true,  itemtype: "http://schema.org/Organization"}
+      %h4 Get in touch with us
+      %meta{itemprop: "name", content: "Webmil"}
+      %address{itemscope: true, itemprop: "address" ,itemtype: "http://schema.org/PostalAddress"}
+        .tel{itemprop: "telephone"} +380 342 735 448
+        .mail{itemprop: "email"} info@webmil.com.ua
+        .locality{itemprop: "addressLocality"} UKRAINE, Ivano-Frankivs’k
+        .street{itemprop: "streetAddress"} Sichovyh Strilciv Street, 31
+      %a{href: "#"} Map & directions
+    .copyright
+      %p © 2009-2012 Webmil lab. All rights reserved.
+%script{'type'=> 'text/javascript'}
+  :plain
+    $(window).load(function(){
+        $('.bw').BlackAndWhite({
+            hoverEffect : true,
+            // set the path to BnWWorker.js for a superfast implementation
+            webworkerPath : false,
+            // for the images with a fluid width and height 
+            responsive:true
+        });
+    });

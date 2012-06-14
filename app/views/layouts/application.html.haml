@@ -1,0 +1,43 @@
+!!!
+%html
+  %head
+    %meta{charset: "utf-8"}
+    %meta{name: "viewport", content: "width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"}
+    %title test
+    = stylesheet_link_tag 'screen', media: 'screen'
+    = stylesheet_link_tag 'mobile', media: 'screen and (max-width: 330px)'
+    = stylesheet_link_tag 'mobile', media: 'screen and (max-device-width: 330px)'
+    = stylesheet_link_tag 'print', media: 'print'
+
+    = stylesheet_link_tag 'http://fonts.googleapis.com/css?family=PT+Sans|PT+Sans+Narrow&subset=latin,cyrillic'
+    = stylesheet_link_tag 'http://fonts.googleapis.com/css?family=Marmelad&subset=latin,cyrillic,latin-ext'
+    = stylesheet_link_tag 'http://fonts.googleapis.com/css?family=Cuprum:400,700&subset=latin,latin-ext,cyrillic'
+
+    /[if lt IE 9]
+      = javascript_include_tag 'http://html5shiv.googlecode.com/svn/trunk/html5.js'
+    = javascript_include_tag 'http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js' 
+    = javascript_include_tag 'http://maps.googleapis.com/maps/api/js?sensor=false' 
+    = javascript_include_tag 'jQuery.BlackAndWhite.min.js' 
+  %body
+    .wrap
+      %header
+        .header
+          .left-side
+            .lang-list
+              %ul
+                %li
+                  %a.active.en{href: '#'} eng
+                %li
+                  %a.ua{href: '#'} ua
+            .slogan
+              = image_tag('slogan.png', alt: 'We are web development rock stars')
+            = render 'layouts/navigation'
+            .menu
+          .logo
+            = link_to image_tag('logo.png', alt: 'Webmil'), root_path
+      
+      =yield
+
+      .footer-push
+    = render 'layouts/footer'
+        

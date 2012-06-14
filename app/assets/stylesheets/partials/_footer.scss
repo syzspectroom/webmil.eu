@@ -1,0 +1,91 @@
+//footer rules
+footer{
+  background: #f8f8f8;
+  min-width: $base-width;
+  width: auto !important;
+  margin-top: 60px;
+  clear: both;
+  .footer-container{
+    @include container;
+    color: #4f4f4f;
+    line-height: 24px;
+    padding-top: 40px;
+    ul{
+      margin-top:25px;
+      li{
+        a{
+          color: #4f4f4f;
+          text-decoration: none;
+          &:hover{
+            color: $hover-color;
+          }
+        }
+      }
+    }
+    .sitemap{
+      @include column(2);
+    }
+    .resources{
+      @include column(2);
+      @include prepend(1);
+    }
+    .twitter{
+      @include column(11);
+      @include prepend(2);
+      h4{
+        a{
+          color: #979797;
+          text-decoration: underline;
+          &:hover{
+           color: #4d4d4f;
+           text-decoration: none;
+         }
+       }
+       a.music{
+        margin-left: 35px;
+      }
+      a.active{
+        color: #4d4d4f;
+        text-decoration: none;
+      }
+    }
+    p{
+      background: #fff;
+      border: 1px dotted #736357;
+      border-radius: 4px;
+      margin-top: 16px;
+      padding: 8px;
+      position:relative;
+      color: #736357;
+      span{
+        display:block;
+        width: 23px;
+        height: 24px;
+        position:absolute;
+        bottom:0;
+        right:10px;
+        background: asset-url("quotes.png", image) no-repeat;
+      }
+    }
+    span{
+      float:right;
+      color: #736357;
+    }
+  }
+  .address{
+    @include column(5, true);
+    @include prepend(1);
+    address{
+      margin-top:25px;
+    }
+  }
+  .copyright{
+    @include column(8);
+    p{
+      color: #979797;
+      margin-top: 10px;
+      line-height: 18px;
+    }
+  }
+}
+}
