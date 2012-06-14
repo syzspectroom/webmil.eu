@@ -1,4 +1,8 @@
 WebmilEu::Application.routes.draw do
+  get "work/index"
+
+  get "work/show"
+
   get "pages/home"
 
   get "pages/studio"
