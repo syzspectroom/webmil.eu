@@ -12,7 +12,7 @@ class ContactController < ApplicationController
       redirect_to(contacts_path, :notice => "Message was successfully sent.")
     else
       flash.now.alert = "Please fill all fields."
-      render :new
+      render :index
     end
   end 
 end

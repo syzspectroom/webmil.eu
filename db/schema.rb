@@ -11,13 +11,12 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120614193542) do
+ActiveRecord::Schema.define(:version => 20120614205056) do
 
-  create_table "messages", :force => true do |t|
-    t.text     "name"
-    t.text     "email"
-    t.text     "subject"
-    t.text     "body"
+  create_table "pictures", :force => true do |t|
+    t.string   "image"
+    t.string   "title"
+    t.integer  "works_id"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end
@@ -28,12 +27,12 @@ ActiveRecord::Schema.define(:version => 20120614193542) do
     t.string   "main_image"
     t.text     "short_description"
     t.text     "description"
-    t.string   "show_on_mine_page"
-    t.string   "pictures_attributes"
-    t.string   "slug"
-    t.datetime "created_at",          :null => false
-    t.datetime "updated_at",          :null => false
     t.boolean  "show_on_main_page"
+    t.string   "slug"
+    t.datetime "created_at",        :null => false
+    t.datetime "updated_at",        :null => false
   end
+
+  add_index "works", ["slug"], :name => "index_works_on_slug", :unique => true
 
 end
