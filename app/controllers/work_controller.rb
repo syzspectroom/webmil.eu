@@ -6,6 +6,7 @@ class WorkController < ApplicationController
   end
 
   def show
+  	
    # @work = Work.find_by_slug(params[:id])
   end
 end
