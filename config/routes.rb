@@ -1,13 +1,10 @@
 WebmilEu::Application.routes.draw do
-  get "contact/index"
+  root to: 'pages#home'
+  
+  resources :works, only: [:index, :show], controller: :work
 
-  get "contact/create"
-
-  get "work/index"
-
-  get "work/show"
-
-  get "pages/home"
+  match 'contacts' => 'contact#index', as: 'contacts', via: :get
+  match 'contacts' => 'contact#create', as: 'contacts', via: :post  
 
   get "pages/studio"
 
