@@ -1,2 +1,41 @@
-%h1 Contact#index
-%p Find me in app/views/contact/index.html.haml
+.content
+  .left-address
+    .address{itemscope: true, itemtype: "http://schema.org/Organization"}
+      %meta{itemprop: "name", content: "Webmil"}
+        %address{itemscope: true, itemprop: "address" ,itemtype: "http://schema.org/PostalAddress"}
+          %h2 Adress:
+          .locality{itemprop: "addressLocality"}
+            %p 76000 Україна
+            %p м.Івано-Франківськ
+          .street{itemprop: "streetAddress"}
+            %p вул. Січових Стрільців, 30
+          %h2 Phone:
+          .tel
+            %p{itemprop: "telephone"} +38 0342 735 448
+            %p{itemprop: "telephone"} +38 094 922 8448
+            %p{itemprop: "telephone"} +38 063 757 0020
+          %h2 On-line:
+          .skype
+            %p
+              skype:
+              %span butlerok
+          .mail
+            %p
+              e-mail:
+              %span{itemprop: "email"} info@webmil.com.ua
+  .right-address
+    %h2 How to get
+    #map
+  .form-txt
+    %h2 Contact Us
+    %p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+    
+  = semantic_form_for @message, :url => contacts_path(@message), :html => { :method => :post } do |f|
+    .form
+      =f.inputs do
+        = f.input :name, as: :string
+        = f.input :subject
+        = f.input :email, :as => :email
+        = f.input :body, :as => :text, :label => 'Message'
+        .send
+          =submit_tag "Send", {:class => 'send-button'}
