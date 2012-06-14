@@ -1,4 +1,8 @@
 WebmilEu::Application.routes.draw do
+  get "contact/index"
+
+  get "contact/create"
+
   get "work/index"
 
   get "work/show"
