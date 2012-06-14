@@ -1,0 +1,36 @@
+footer{
+    min-width: $base-width;
+    .footer-container{
+        @include container;
+	line-height: 18px;
+        padding-top: 20px;
+	ul{
+	    margin-top:10px;
+	}
+        .sitemap{
+            display: none;
+        }
+        .resources{
+            @include column(2);
+	    @include prepend(0);
+	    ul, h4{
+		margin-left: 5px;
+	    }
+        }
+        .twitter{
+            display: none;
+        }
+        .address{
+            @include column(5, true);
+	    address{
+		margin-top: 10px;
+	    }
+        }
+	.copyright{
+	    @include column(4);
+	    p{
+		margin-left: 5px;
+	    }
+	}
+    }
+}

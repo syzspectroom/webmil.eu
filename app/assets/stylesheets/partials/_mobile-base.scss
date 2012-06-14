@@ -1,0 +1,232 @@
+@include sticky-footer(185px, ".wrap", ".footer-push", "footer");
+html, body{
+  min-width: $base-width;
+  width: auto;
+}
+body{
+  font-size: 12px;
+  line-height: 18px;
+}
+header{
+  width: $base-width;
+}
+h2{
+  font-size: 20px;
+  line-height: 20px;
+}
+.container{
+  min-width: $base-width;
+  width: auto;
+}
+//index page mobile view rules
+.container{
+  section{
+   article{
+     .design, .development, .complex-websites, .code-quality{
+      @include column(8, true);
+      margin: 20px 0 0 0;
+      .logo{
+        @include column(1);
+        margin-left: 5px;
+        img{
+         width: 30px;
+       }
+     }
+     .desc{
+      @include column(7, true);
+      p{
+       width: 100%;
+       margin: 5px 0 0 0;
+     }
+   }
+ }
+}
+.statistics{
+ display: none;
+}
+}
+}
+.border{
+  display: none;
+}
+.clients{
+  @include column(8);
+  margin: 20px 0 0 0;
+  .list{
+   margin-left: 5px;
+   .bw{
+     margin:15px 14px 0 0;
+   }
+ }
+}
+
+//contacts page mobile view rules
+.left-address{
+  @include column(8, true);
+  margin: 20px 0 0 0;
+  .address{
+   margin-left: 5px;
+   h2.phone, h2.on-line{
+     margin-top: 20px;
+   }
+   .locality, .tel, .skype{
+    margin-top: 10px;
+  }
+}
+}
+.right-address{
+  @include column(8, true);
+  @include prepend(0);
+  h2{
+   margin: 20px 0 0 5px;
+ }
+ #map{
+  width: 295px;
+  height: 200px;
+  border: 5px solid #f8f8f8;
+  margin: 10px 0 0 5px;
+}
+}
+.form-txt{
+  @include column(8, true);
+  h2{
+   margin-left: 5px;
+ }
+ p{
+   margin: 10px 0 0 5px;
+ }
+}
+form{
+  @include column(8, true);
+  margin-top: 10px;
+  .form{
+   margin: 0 0 0 5px;
+   input, textarea{
+    width: 295px;
+    height: 20px;
+    font-size: 12px;
+  }
+  textarea{
+    height: 100px;
+  }
+  span{
+    display: none;
+  }
+  input.send-button{
+    margin-left: 255px;
+    font-size: 16px;
+  }
+  .send{
+    @include prepend(0);
+  }
+}
+}
+//studio page mobile view rules
+.container{
+  .about-us, .office, .studio-design, .studio-development, .studio-complex-websites, .studio-code-quality{
+   @include column(8, true);
+   margin: 20px 0 0 0;
+   h2{
+     margin-left: 5px;
+   }
+   p{
+     margin: 10px 0 0 5px;
+   }
+ }
+ .studio-design, .studio-development, .studio-complex-websites, .studio-code-quality{
+   margin-top: 20px;
+ }
+ .agile-scrum-advantages{
+   @include column(8, true);
+   margin: 20px 0 0 0;
+   .agile-scrum-advantages-p-1{
+     @include column(8);
+     p{
+      margin: 10px 0 0 5px;
+    }
+  }
+  .agile-scrum-advantages-p-2{
+   @include column(8);
+   p{
+    margin: 10px 0 0 5px;
+  }
+}
+.agile-scrum-advantages-p-3{
+ @include column(8, true);
+ p{
+  margin: 20px 0 0 5px;
+}
+}
+}
+}
+
+//team list rules
+.team{
+  @include column(8);
+  margin: 20px 0 0 0;
+  .employees, h2{
+   margin-left: 5px;
+ }
+ .employees li{
+  margin: 10px 15px 0 0;
+  img{
+    width: 80px;
+    height: 94px;
+  }
+  p.fn, p.title{
+    line-height: 16px;
+  }
+}
+}
+
+//work open page rules
+.work-background{
+  background: none;
+  margin: 20px 0 0 5px;
+  width: $base-width;
+  padding: 0;
+  .container{
+   .work{
+     h2{
+       
+      .link{
+        
+      }
+    }
+    .description{
+      p{
+        span{
+         
+        }
+      }
+    }
+    .screenshots{
+      margin-top: 0;
+      img{
+        margin-top: 10px;
+        width: 300px;
+      }
+    }
+  }
+}
+}
+.container{
+  .advertising{
+   @include column(8, true);
+   .booklet{
+     @include column(8, true);
+     margin-top: 10px;
+     img{
+      margin-left: 5px;
+      width: 300px;
+    }
+  }
+  .city-light{
+   @include prepend(0);
+   img{
+    margin-left: 5px;
+    width: 300px;
+  }
+}
+}
+}

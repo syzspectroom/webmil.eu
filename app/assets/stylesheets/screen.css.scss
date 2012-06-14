@@ -1,6 +1,26 @@
-/* Welcome to Compass.
- * In this file you should write your main styles. (or centralize your imports)
- * Import this file using the following HTML or equivalent:
- * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
-
+// This import applies a global reset to any page that imports this stylesheet.
 @import "compass/reset";
+
+// To configure blueprint, edit the partials/_base.sass file.
+@import "partials/basegrid";
+
+// Import all the default blueprint modules so that we can access their mixins.
+@import "blueprint/grid";
+
+// Generate the blueprint framework according to your configuration:
+
+@import "compass/css3/inline-block";
+@import "compass/layout/sticky-footer";
+@import "compass/css3";
+$base-width: 950px;
+
+//import base rules
+@import "partials/base";
+
+//import footer rules
+@import "partials/footer";
+
+//import header rules
+@import "partials/header";
+
+

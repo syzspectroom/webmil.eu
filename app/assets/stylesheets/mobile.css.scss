@@ -1,0 +1,17 @@
+
+// To configure blueprint, edit the partials/_base.sass file.
+@import "partials/mobile-basegrid";
+
+// Import all the default blueprint modules so that we can access their mixins.
+@import "blueprint/liquid";
+@import "compass/layout/sticky-footer";
+$base-width: 310px;
+
+//import base rules
+@import "partials/mobile-base";
+
+//import footer rules
+@import "partials/mobile-footer";
+
+//import header rules
+@import "partials/mobile-header";
