@@ -1,24 +1,24 @@
-.content
+.container
   .left-address
     .address{itemscope: true, itemtype: "http://schema.org/Organization"}
-      %meta{itemprop: "name", content: "Webmil"}
+      %meta{itemprop: "name", content: "CANaction"}
         %address{itemscope: true, itemprop: "address" ,itemtype: "http://schema.org/PostalAddress"}
-          %h2 Adress:
+          %h2.adress Adress:
           .locality{itemprop: "addressLocality"}
-            %p 76000 Україна
-            %p м.Івано-Франківськ
+            %p 76000 Ukraine
+            %p Ivano-Frankivsk
           .street{itemprop: "streetAddress"}
-            %p вул. Січових Стрільців, 30
-          %h2 Phone:
+            %p st. Sichovykh Stril'tsiv, 30
+          %h2.phone Phone:
           .tel
             %p{itemprop: "telephone"} +38 0342 735 448
             %p{itemprop: "telephone"} +38 094 922 8448
             %p{itemprop: "telephone"} +38 063 757 0020
-          %h2 On-line:
+          %h2.on-line On-line:
           .skype
             %p
               skype:
-              %span butlerok
+              %span webmil.ltd
           .mail
             %p
               e-mail:
@@ -28,14 +28,58 @@
     #map
   .form-txt
     %h2 Contact Us
-    %p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-    
-  = semantic_form_for @message, :url => contacts_path(@message), :html => { :method => :post } do |f|
+    %p Webmil is always open to cooperation. We strive to create new startups and projects you need to be done, bringing in something fresh and interesting all the way. We are thirsty for new people who are able to combine clear and logical thinking with bursting creativeness and unfolded imagination. Are you sure you satisfy these requirements, we will be happy to complete our team with another programming-lover.
+  %form
     .form
-      =f.inputs do
-        = f.input :name, as: :string
-        = f.input :subject
-        = f.input :email, :as => :email
-        = f.input :body, :as => :text, :label => 'Message'
-        .send
-          =submit_tag "Send", {:class => 'send-button'}
+      %label{for:'name'} Name
+      %input#name.error{:type=> "text"}
+      %span Please enter your Name
+      %label{for:'subject'} Subject
+      %input#subject{:type=> "text"}
+      %label{for:'email'} E-mail
+      %input#email{:type=> "text"}
+      %label{for:'message'} Message
+      %textarea#message
+      .send
+        %input.send-button{type: "submit", value: "Send"}
+
+%script{'type'=> 'text/javascript'}
+  :plain
+    //google map
+    var init = function(){
+        var myOptions = {
+            zoom: 15,
+            streetViewControl: false ,
+            mapTypeId: google.maps.MapTypeId.ROADMAP};
+        var map = new google.maps.Map(document.getElementById("map"), myOptions);
+            var pinkParksStyles = [
+                {
+                    featureType: "all",
+                    stylers: [
+                        { hue: "#e8bf56" },
+                        { saturation: "0" },
+                        { lightness: "-10" },
+
+                    ]
+                },
+                {
+                    featureType: "road",
+                    stylers: [
+                        { hue: "#e8bf56" },
+                        { saturation: "-20" }
+                    ]
+                }
+            ];
+    map.setOptions({styles: pinkParksStyles});
+        var geocoder = new google.maps.Geocoder();
+        geocoder.geocode( { 'address': 'Івано-Франківськ, Січових Стрільців 30'}, function(results, status){
+            if (status == google.maps.GeocoderStatus.OK){
+                map.setCenter(results[0].geometry.location);
+                var conf ={
+                    map: map,
+                    position: results[0].geometry.location};
+                var marker = new google.maps.Marker(conf);
+            }
+        })
+    };
+    google.maps.event.addDomListener(window, 'load', init());

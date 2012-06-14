@@ -6,7 +6,7 @@ WebmilEu::Application.routes.draw do
   match 'contacts' => 'contact#index', as: 'contacts', via: :get
   match 'contacts' => 'contact#create', as: 'contacts', via: :post  
 
-  get "pages/studio"
+  match '/studio', to: 'pages#studio'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
