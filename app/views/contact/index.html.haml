@@ -6,7 +6,7 @@
           %h2.adress Adress:
           .locality{itemprop: "addressLocality"}
             %p 76000 Ukraine
-            %p Ivano-Frankivsk                                 
+            %p Ivano-Frankivsk                                
           .street{itemprop: "streetAddress"}
             %p st. Sichovykh Stril'tsiv, 30
           %h2.phone Phone:
@@ -28,21 +28,17 @@
     #map
   .form-txt
     %h2 Contact Us
-    %p Webmil is always open to cooperation. We strive to create new startups and projects you need to be done, bringing in something fresh and interesting all the way. We are thirsty for new people who are able to combine clear and logical thinking with bursting creativeness and unfolded imagination. Are you sure you satisfy these requirements, we will be happy to complete our team with another programming-lover. 
-  %form
+    %p Webmil is always open to cooperation. We strive to create new startups and projects you need to be done, bringing in something fresh and interesting all the way. We are thirsty for new people who are able to combine clear and logical thinking with bursting creativeness and unfolded imagination. Are you sure you satisfy these requirements, we will be happy to complete our team with another programming-lover.
+  = semantic_form_for @message, url: contacts_path(@message), html: { method: :post } do |f|
     .form
-      %label{for:'name'} Name
-      %input#name.error{:type=> "text"}
-      %span Please enter your Name
-      %label{for:'subject'} Subject
-      %input#subject{:type=> "text"}
-      %label{for:'email'} E-mail
-      %input#email{:type=> "text"}
-      %label{for:'message'} Message
-      %textarea#message
-      .send
-        %input.send-button{type: "submit", value: "Send"}
-
+      =f.inputs do
+        = f.input :name, as: :string
+        = f.input :subject
+        = f.input :email, as: :email
+        = f.input :body, as: :text, label: 'Message'
+        .send
+          =submit_tag "Send", {class: 'send-button'}
+ 
 %script{'type'=> 'text/javascript'}
   :plain
     //google map
@@ -59,7 +55,7 @@
                         { hue: "#e8bf56" },
                         { saturation: "0" },
                         { lightness: "-10" },
-
+ 
                     ]
                 },
                 {
