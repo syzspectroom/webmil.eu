@@ -1,10 +1,14 @@
 WebmilEu::Application.routes.draw do
+  mount RailsAdmin::Engine => '/admin', :as => 'rails_admin'
+
+  devise_for :users
+
   root to: 'pages#home'
   
   resources :works, only: [:index, :show], controller: :work
 
-  match 'contacts' => 'contact#index', as: 'contacts', via: :get
-  match 'contacts' => 'contact#create', as: 'contacts', via: :post  
+  get 'contacts' => 'contact#index', as: 'contacts'
+  post 'contacts' => 'contact#create', as: 'contacts'
 
   match '/studio', to: 'pages#studio'
 

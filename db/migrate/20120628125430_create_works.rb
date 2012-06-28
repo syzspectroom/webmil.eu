@@ -4,9 +4,8 @@ class CreateWorks < ActiveRecord::Migration
       t.string :name
       t.string :url
       t.string :main_image
-      t.text :short_description
-      t.text :description
-      t.boolean :show_on_main_page
+      t.string :short_description
+      t.string :description
       t.string :slug
 
       t.timestamps

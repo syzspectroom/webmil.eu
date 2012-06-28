@@ -1,2 +1,32 @@
-%h1 Work#index
-%p Find me in app/views/work/index.html.haml
+.works
+  %ul#container.clearfix
+    - 10.times do
+      = render 'work/listitem'
+
+.clearfix
+
+%script{'type'=> 'text/javascript'}
+  :plain
+    $(document).ready(function() {
+        $('#container').center();
+        $(window).resize(function() {
+            $('#container').center();
+        });
+        $('.work-short-desc').animate({backgroundColor: 'blue' }, "slow");
+        var $container = $('#container');
+        $container.imagesLoaded( function(){
+            $container.masonry({
+                itemSelector : '.box',
+                isAnimated: true
+            });
+        });
+    });
+    $(window).load(function(){
+        $('.bwWrapper').BlackAndWhite({
+            hoverEffect : true,
+            // set the path to BnWWorker.js for a superfast implementation
+            webworkerPath : false,
+            // for the images with a fluid width and height 
+            responsive:true
+        });
+    });

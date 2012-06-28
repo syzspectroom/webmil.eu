@@ -1,7 +1,7 @@
-require 'spec_helper'
+class Work < ActiveRecord::Base
+  attr_accessible :description, :main_image, :name, :short_description, :slug, :url
 
-describe Work do
-  pending "add some examples to (or delete) #{__FILE__}"
+  has_many :pictures
 end
 # == Schema Information
 #

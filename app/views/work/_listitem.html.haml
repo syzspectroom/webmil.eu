@@ -1,0 +1,9 @@
+%li.box.bwWrapper
+  %figure
+    %a{href: 'work.html'}
+      = image_tag("portfolio-#{rand(1..4)}.png", alt: 'Portfolio')
+    %figcaption
+      %div{class:"work-short-desc color-#{rand(1..4)}"}
+        %p
+          %a{href: 'work.html'} web site “Business Concept” company
+        = link_to('http://bcu.kiev.ua', 'http://bcu.kiev.ua', class: 'link')
