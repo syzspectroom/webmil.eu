@@ -1,6 +1,6 @@
 class Picture < ActiveRecord::Base
-  attr_accessible :image, :title, :work_id
-  belongs_to :work
+  attr_accessible :image, :title
+  belongs_to :work, inverse_of: :pictures
 end
 # == Schema Information
 #

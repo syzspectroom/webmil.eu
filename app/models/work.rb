@@ -1,7 +1,8 @@
 class Work < ActiveRecord::Base
-  attr_accessible :description, :main_image, :name, :short_description, :slug, :url
+  attr_accessible :description, :main_image, :name, :short_description, :slug, :url, :pictures_attributes
 
-  has_many :pictures
+  has_many :pictures, dependent: :destroy
+  accepts_nested_attributes_for :pictures
 end
 # == Schema Information
 #
