@@ -1,5 +1,5 @@
 class Picture < ActiveRecord::Base
-  attr_accessible :image,  :image_cache, :image_asset, :title
+  attr_accessible :image, :remove_image,  :image_cache, :image_asset, :title
   belongs_to :work, inverse_of: :pictures
   mount_uploader :image, ImageUploader
 end

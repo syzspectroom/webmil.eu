@@ -1,4 +1,4 @@
-# RailsAdmin config file. Generated on July 02, 2012 23:27
+# RailsAdmin config file. Generated on July 05, 2012 16:49
 # See github.com/sferik/rails_admin for more informations
 
 RailsAdmin.config do |config|
@@ -83,7 +83,7 @@ RailsAdmin.config do |config|
   #   # Found associations:
   #     configure :work, :belongs_to_association   #   # Found columns:
   #     configure :id, :integer 
-  #     configure :image, :string 
+  #     configure :image, :carrierwave 
   #     configure :title, :string 
   #     configure :work_id, :string         # Hidden 
   #     configure :created_at, :datetime 

@@ -1,6 +1,7 @@
 class Work < ActiveRecord::Base
-  attr_accessible :description, :main_image, :name, :short_description, :slug, :url, :pictures_attributes
+  attr_accessible :description, :main_image, :remove_main_image,:main_image_cache, :main_image_asset, :name, :short_description, :slug, :url, :pictures_attributes
 
+  mount_uploader :main_image, MainImageUploader
   has_many :pictures, dependent: :destroy
   accepts_nested_attributes_for :pictures
 end

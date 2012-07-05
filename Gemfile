@@ -34,6 +34,7 @@ gem 'formtastic'
 gem "dynamic_form"
 
 gem 'rails_admin'
+gem 'rmagick'
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
 
