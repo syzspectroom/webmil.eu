@@ -1,2 +1,21 @@
-%h1 Work#show
-%p Find me in app/views/work/show.html.haml
+.work-background
+	.container
+		.work
+			%h2
+				=@work.name
+				= link_to '← back', works_path, class: 'link'
+				%a{href: ''}
+					=@work.url
+			.description
+				%p
+					=@work.description
+			.screenshots
+				- @work.pictures.each do |picture|
+					%img{src: picture.image.url, alt: picture.title}
+	.container
+	/ .advertising
+	/ 	.booklet
+	/ 		%img{src: 'images/work-3.png', alt: 'Work'}
+	/ 	.city-light
+	/ 		%img{src: 'images/work-4.png', alt: 'Work'}
+	.footer-push

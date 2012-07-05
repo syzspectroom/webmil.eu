@@ -1,7 +1,16 @@
 .works
   %ul#container.clearfix
-    - 10.times do
-      = render 'work/listitem'
+
+    - @works.each do |work|
+      %li.box.bwWrapper
+        %figure
+          %a{href: 'work.html'}
+            = image_tag(work.main_image, alt: work.short_description)
+          %figcaption
+            %div{class:"work-short-desc color-#{rand(1..4)}"}
+              %p
+                = link_to work.name, work_path(work.slug)
+              = link_to(work.url, work.url, class: 'link')
 
 .clearfix
 
@@ -26,7 +35,7 @@
             hoverEffect : true,
             // set the path to BnWWorker.js for a superfast implementation
             webworkerPath : false,
-            // for the images with a fluid width and height 
+            // for the images with a fluid width and height
             responsive:true
         });
     });

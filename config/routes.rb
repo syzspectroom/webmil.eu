@@ -1,14 +1,14 @@
 WebmilEu::Application.routes.draw do
-  
 
-  
+
+
 
   mount RailsAdmin::Engine => '/admin', :as => 'rails_admin'
 
   devise_for :users
 
   root to: 'pages#home'
-  
+
   resources :works, only: [:index, :show], controller: :work
 
   get 'contacts' => 'contact#index', as: 'contacts'
