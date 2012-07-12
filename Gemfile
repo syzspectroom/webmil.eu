@@ -16,6 +16,7 @@ group :assets do
   gem 'compass-rails'
 end
 
+gem 'i18n'
 gem 'active_link_to'
 gem 'jquery-rails', '2.0.0'
 gem "haml", ">= 3.1.4"
