@@ -68,6 +68,7 @@ set :scm,             :git
 # http://locum.ru/blog/hosting/git-on-locum
 # set :repository,      "ssh://#{user}@#{deploy_server}/home/#{user}/git/#{application}.git"
 
+
 ## Если ваш репозиторий в GitHub, используйте такую конфигурацию
 set :repository,    "git://github.com/syzspectroom/webmil.eu.git"
 
@@ -75,6 +76,7 @@ set :repository,    "git://github.com/syzspectroom/webmil.eu.git"
 ## dayabase.yml в shared-каталог проекта на сервере и раскомментируйте
 ## следующие строки.
 
+before "deploy:assets:precompile", :copy_database_config
 after "deploy:update_code", :copy_database_config
 task :copy_database_config, roles => :app do
   db_config = "#{shared_path}/database.yml"
