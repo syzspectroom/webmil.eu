@@ -107,6 +107,7 @@ GEM
       activesupport (>= 3.0.0)
       railties (>= 3.0.0)
     kgio (2.7.4)
+    libv8 (3.3.10.4)
     machinist (2.0)
     mail (2.4.4)
       i18n (>= 0.4.0)
@@ -194,6 +195,8 @@ GEM
       rack (~> 1.0)
       tilt (~> 1.1, != 1.3.0)
     subexec (0.2.2)
+    therubyracer (0.9.9)
+      libv8 (~> 3.3.10)
     thor (0.15.2)
     tilt (1.3.3)
     treetop (1.4.10)
@@ -227,6 +230,7 @@ DEPENDENCIES
   devise
   dynamic_form
   email_spec (>= 1.2.1)
+  execjs
   factory_girl_rails!
   formtastic
   haml (>= 3.1.4)
@@ -240,6 +244,7 @@ DEPENDENCIES
   rmagick
   rspec-rails (>= 2.8.1)
   sass-rails (~> 3.2.4)
+  therubyracer
   uglifier (>= 1.0.3)
   unicorn
   webrat
