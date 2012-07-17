@@ -51,7 +51,7 @@ a{
 }
 
 .container{
-	@include container;
+	@import container;
 }
 
 //index page rules
