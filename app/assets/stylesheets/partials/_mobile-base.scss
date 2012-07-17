@@ -1,4 +1,5 @@
-@import sticky-footer(185px, ".wrap", ".footer-push", "footer");
+@import "compass/layout/sticky-footer";
+@include sticky-footer(185px, ".wrap", ".footer-push", "footer");
 html, body{
   min-width: $base-width;
   width: auto;
