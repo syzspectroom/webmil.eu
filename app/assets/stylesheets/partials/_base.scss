@@ -33,11 +33,11 @@ h4{
 }
 
 h5{
-	
+
 }
 //statistics heading
 h6{
-	
+
 }
 
 // link
@@ -141,7 +141,7 @@ a{
 				background: asset-url("statistics-hours-ico.png", image) 0 -100px no-repeat;
 			}
 			.hours-music{
-				background: asset-url("statistics-hours-ico.png", image) 0 -190px no-repeat;	    	
+				background: asset-url("statistics-hours-ico.png", image) 0 -190px no-repeat;
 			}
 		}
 	}
@@ -228,17 +228,17 @@ a{
 				width: 120px;
 			}
 			.coffee{
-				background: asset-url("coffee.png", image) 0 0 no-repeat;	    	
+				background: asset-url("coffee.png", image) 0 0 no-repeat;
 				padding-left: 55px;
 				width: 117px;
 			}
 			.tea{
-				background: asset-url("tea.png", image) 0 0 no-repeat;	
+				background: asset-url("tea.png", image) 0 0 no-repeat;
 				padding-left: 85px;
 				width: 90px;
 			}
 			.bananas{
-				background: asset-url("bananas.png", image) 0 0 no-repeat;	
+				background: asset-url("bananas.png", image) 0 0 no-repeat;
 				padding-left: 75px;
 				width: 70px;
 			}
@@ -445,7 +445,7 @@ form{
 //works page rules
 .works{
 	width: 100%;
-	margin-top: 60px; 
+	margin-top: 60px;
 	ul{
 		width: 100%;
 		li{
@@ -454,7 +454,7 @@ form{
 			float: left;
 			&:hover{
 				.color-1{
-					background: #9c2522;  
+					background: #9c2522;
 				}
 				.color-2{
 					background: #f0525b;
@@ -474,7 +474,7 @@ form{
 					height: 200px;
 				}
 			}
-			
+
 			.work-short-desc{
 				float: left;
 				width: 180px;
@@ -513,8 +513,8 @@ form{
 			.color-4{
 				background: #d5d5d5;
 			}
-			
-			
+
+
 		}
 	}
 }
@@ -548,7 +548,7 @@ form{
 					&:hover{
 						color: $hover-color;
 					}
-					
+
 				}
 			}
 			a{

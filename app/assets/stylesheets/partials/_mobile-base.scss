@@ -1,4 +1,4 @@
-@include sticky-footer(185px, ".wrap", ".footer-push", "footer");
+@import sticky-footer(185px, ".wrap", ".footer-push", "footer");
 html, body{
   min-width: $base-width;
   width: auto;
@@ -188,15 +188,15 @@ form{
   .container{
    .work{
      h2{
-       
+
       .link{
-        
+
       }
     }
     .description{
       p{
         span{
-         
+
         }
       }
     }
