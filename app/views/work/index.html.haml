@@ -7,7 +7,7 @@
           %a{href: 'work.html'}
             = image_tag(work.main_image, alt: work.short_description)
           %figcaption
-            %div{class:"work-short-desc color-#{rand(1..4)}"}
+            %div{class:"work-short-desc color-#{1+rand(4)}"}
               %p
                 = link_to work.name, work_path(work.slug)
               = link_to(work.url, work.url, class: 'link')

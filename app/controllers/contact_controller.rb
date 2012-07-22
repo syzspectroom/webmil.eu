@@ -1,10 +1,12 @@
 
 class ContactController < ApplicationController
   def index
+    @page_title = '- Contacts'
     @message = Message.new
   end
 
   def create
+    @page_title = '- Contacts'
     @message = Message.new(params[:message])
     
     if @message.valid?

@@ -3,12 +3,12 @@
     .address{itemscope: true,  itemtype: "http://schema.org/Organization"}
       %meta{itemprop: "name", content: "CANaction"}
         %address{itemscope: true, itemprop: "address" ,itemtype: "http://schema.org/PostalAddress"}
-          %h2.adress Adress:
+          %h2.adress Address:
           .locality{itemprop: "addressLocality"}
             %p 76000 Ukraine
             %p Ivano-Frankivsk                                
           .street{itemprop: "streetAddress"}
-            %p st. Sichovykh Stril'tsiv, 30
+            %p 30 Sichovykh Stril'tsiv Street
           %h2.phone Phone:
           .tel
             %p{itemprop: "telephone"} +38 0342 735 448
@@ -24,10 +24,10 @@
               e-mail:
               %span{itemprop: "email"} info@webmil.com.ua
   .right-address
-    %h2 How to get
+    %h2 Office on the map:
     #map
   .form-txt
-    %h2 Contact Us
+    %h2 Contact us:
     %p Webmil is always open to cooperation. We strive to create new startups and projects you need to be done, bringing in something fresh and interesting all the way. We are thirsty for new people who are able to combine clear and logical thinking with bursting creativeness and unfolded imagination. Are you sure you satisfy these requirements, we will be happy to complete our team with another programming-lover.
   = semantic_form_for @message, url: contacts_path(@message), html: { method: :post } do |f|
     .form

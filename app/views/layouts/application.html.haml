@@ -3,7 +3,7 @@
   %head
     %meta{charset: "utf-8"}
     %meta{name: "viewport", content: "width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"}
-    %title test
+    %title Webmil #{@page_title}
     = stylesheet_link_tag 'screen', media: 'screen'
     = stylesheet_link_tag 'mobile', media: 'screen and (max-width: 330px)'
     = stylesheet_link_tag 'mobile', media: 'screen and (max-device-width: 330px)'
@@ -23,12 +23,12 @@
       %header
         .header
           .left-side
-            .lang-list
-              %ul
-                %li
-                  %a.active.en{href: '#'} eng
-                %li
-                  %a.ua{href: '#'} ua
+            / .lang-list
+            /   %ul
+            /     %li
+            /       %a.active.en{href: '#'} eng
+            /     %li
+            /       %a.ua{href: '#'} ua
             .slogan
               = image_tag('slogan.png', alt: 'We are web development rock stars')
             = render 'layouts/navigation'
