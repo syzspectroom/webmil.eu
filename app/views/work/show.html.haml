@@ -4,8 +4,7 @@
 			%h2
 				=@work.name
 				= link_to '← back', works_path, class: 'link'
-				%a{href: ''}
-					=@work.url
+				= link_to @work.url, @work.full_url
 			.description
 				%p
 					=@work.description

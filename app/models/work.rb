@@ -4,6 +4,10 @@ class Work < ActiveRecord::Base
   mount_uploader :main_image, MainImageUploader
   has_many :pictures, dependent: :destroy
   accepts_nested_attributes_for :pictures
+
+  def full_url
+  	'http://'+url
+  end	
 end
 # == Schema Information
 #
