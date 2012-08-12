@@ -1,4 +1,3 @@
-
 jQuery.fn.center = function () {
     var cont = this.outerWidth();
     var cont1 = 400;
