@@ -32,10 +32,10 @@
   = semantic_form_for @message, url: contacts_path(@message), html: { method: :post } do |f|
     .form
       =f.inputs do
-        = f.input :name, as: :string
-        = f.input :subject
-        = f.input :email, as: :email
-        = f.input :body, as: :text, label: 'Message'
+        = f.input :name, as: :string, :label => "Name"
+        = f.input :subject, :label => "Subject"
+        = f.input :email, as: :email, :label => "E-mail"
+        = f.input :body, as: :text, :label => "Message"
         .send
           =submit_tag "Send", {class: 'send-button'}
  
