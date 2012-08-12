@@ -5,28 +5,7 @@ header{
 		margin-top: 50px;
 		.left-side{
 			@include column(10);
-			.lang-list{
-				ul{
-					li{
-						@include inline-block;
-						a{
-							font-family: 'Marmelad', sans-serif;
-							color: #4d4d4f;
-							text-decoration: underline;
-							&:hover{
-								text-decoration: none;
-							}
-						}
-						a.active{
-							color: #b6b6b6;
-							text-decoration: none;
-						}
-						a.ua{
-							margin-left: 10px;
-						}
-					}
-				}
-			}
+			margin-top: 17px;
 			.slogan{
 				margin-top: 82px;
 				img{
