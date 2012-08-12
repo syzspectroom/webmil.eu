@@ -18,7 +18,7 @@ end
 
 gem 'i18n'
 gem 'active_link_to'
-gem 'jquery-rails', '2.0.0'
+gem 'jquery-rails'
 gem "haml", ">= 3.1.4"
 gem "haml-rails", ">= 0.3.4", :group => :development
 gem "rspec-rails", ">= 2.8.1", :group => [:development, :test]
