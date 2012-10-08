@@ -7,12 +7,13 @@ class Work < ActiveRecord::Base
   has_many :pictures, dependent: :destroy
   accepts_nested_attributes_for :pictures
 
-  validates_format_of :url, :with => URI::regexp
+  # validates_format_of :url, :with => URI::regexp
   validates :name, presence: true
   validates :slug, presence: true
+  validates :url, presence: true
 
   def full_url
-  	'http://'+url
+  	"http://"+url
   end	
 end
 # == Schema Information
