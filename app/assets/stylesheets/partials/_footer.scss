@@ -75,6 +75,7 @@ footer{
   .address{
     @include column(5, true);
     @include prepend(1);
+    float: right;
     address{
       margin-top:25px;
     }

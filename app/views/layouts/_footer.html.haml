@@ -11,6 +11,9 @@
           = link_to 'team', studio_path
         %li
           = link_to 'contacts', contacts_path
+        %li
+          .copyright
+            %p © 2009-2012 Webmil lab. All rights reserved.  
     .resources
       %h4 Resources
       %ul
@@ -27,8 +30,6 @@
         .locality{itemprop: "addressLocality"} UKRAINE, Ivano-Frankivs’k
         .street{itemprop: "streetAddress"} Sichovyh Strilciv Street, 31
       %a{href: "#"} Map & directions
-    .copyright
-      %p © 2009-2012 Webmil lab. All rights reserved.
 %script{'type'=> 'text/javascript'}
   :plain
     $(window).load(function(){
