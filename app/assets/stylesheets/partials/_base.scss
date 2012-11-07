@@ -1,4 +1,4 @@
-@include sticky-footer(255px, ".wrap", ".footer-push", "footer");
+@include sticky-footer(170px, ".wrap", ".footer-push", "footer");
 
 $base-color: #4d4d4f;
 $hover-color: #d4372a;
@@ -265,34 +265,17 @@ a{
 		// width: 85px;
 		// height: 57px;
 		float: left;
-		margin:15px 30px 0 0;
+		margin:15px 69px 0 0;
+		&:last-child{
+			margin-right:0px;
+		}
 	}
 }
 
 
-//contacts page rules
-.mailto-btn{
-    display: block;
-    margin: 0 auto;
-    margin-top: 30px;
-    width: 300px;
-    color: #4C4D4F;
-    text-decoration: none;
-    border: 1px solid #C6C6C6;
-    border-radius: 4px 4px 4px 4px;
-    font-size: 2.2em;
-    line-height: 1.7;
-    padding: 0 0.9em;
-    text-align: center;
-   	background: none repeat scroll 0 0 rgba(18, 177, 217, 0.25);
-   	&:hover, &:focus {
-		color: $hover-color;
-   	}
-}
-
 .left-address{
 	@include column(5);
-	margin-top: 80px;
+	margin-top: 40px;
 	.address{
 		h2.on-line, h2.phone{
 			margin-top: 40px;
@@ -321,7 +304,7 @@ a{
 	@include column(18, true);
 	@include prepend(1);
 	h2{
-		margin-top: 80px;
+		margin-top: 40px;
 	}
 	#map{
 		display: block;
@@ -334,7 +317,7 @@ a{
 .form-txt{
 	margin-top: 40px;
 	p{
-		color: #979797;
+	    color: #4D4D4F;
 		margin-top: 20px;
 	}
 }
@@ -619,11 +602,11 @@ span{
 	.skype_pnh_container{
 		display:none !important;
 	}
-	
+
 }
 
 span{
 	.skype_pnh_print_container{
 		display:inline !important;
-	} 	
+	}
 }

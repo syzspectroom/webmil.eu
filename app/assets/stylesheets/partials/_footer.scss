@@ -9,9 +9,9 @@ footer{
     @include container;
     color: #4f4f4f;
     line-height: 24px;
-    padding-top: 40px;
+    padding-top: 20px;
     ul{
-      margin-top:25px;
+      margin-top:15px;
       li{
         a{
           color: #4f4f4f;
@@ -23,11 +23,20 @@ footer{
       }
     }
     .sitemap{
-      @include column(2);
+      @include column(13);
+      ul{
+        display: inline-block;
+        li{
+          @include column(3);
+          display: inline-block;
+          p{
+            color: #979797;
+          }
+        }
+      }
     }
     .resources{
-      @include column(2);
-      @include prepend(1);
+      @include column(5);
     }
     .twitter{
       @include column(11);
@@ -74,18 +83,19 @@ footer{
   }
   .address{
     @include column(5, true);
-    @include prepend(1);
-    float: right;
     address{
-      margin-top:25px;
+      margin-top:15px;
+    }
+    p{
+      margin-top: 17px;
     }
   }
   .copyright{
-    @include column(8);
+    display: inline-block;
     p{
       color: #979797;
-      margin-top: 10px;
       line-height: 18px;
+      margin-top: 15px;
     }
   }
 }

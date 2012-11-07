@@ -5,15 +5,19 @@
       %ul
         %li
           = link_to 'home', root_path
+          %p shortly about us
         %li
           = link_to 'works', works_path
+          %p see what we do
         %li
           = link_to 'team', studio_path
+          %p who’s there
         %li
           = link_to 'contacts', contacts_path
-        %li
-          .copyright
-            %p © 2009-2012 Webmil lab. All rights reserved.  
+          %p where we are
+      .copyright
+        %p © 2009-2012 Webmil lab. All rights reserved.
+
     .resources
       %h4 Resources
       %ul
@@ -27,9 +31,8 @@
       %address{itemscope: true, itemprop: "address" ,itemtype: "http://schema.org/PostalAddress"}
         .tel{itemprop: "telephone"} +380 342 735 448
         .mail{itemprop: "email"} info@webmil.com.ua
-        .locality{itemprop: "addressLocality"} UKRAINE, Ivano-Frankivs’k
-        .street{itemprop: "streetAddress"} Sichovyh Strilciv Street, 31
-      %a{href: "#"} Map & directions
+      %p
+        = link_to 'Map & directions', contacts_path
 %script{'type'=> 'text/javascript'}
   :plain
     $(window).load(function(){
@@ -37,7 +40,7 @@
             hoverEffect : true,
             // set the path to BnWWorker.js for a superfast implementation
             webworkerPath : false,
-            // for the images with a fluid width and height 
+            // for the images with a fluid width and height
             responsive:true
         });
     });
