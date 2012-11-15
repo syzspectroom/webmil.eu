@@ -59,7 +59,7 @@ a{
 		article{
 			.design, .development, .complex-websites, .code-quality{
 				@include column(12);
-				margin-top: 80px;
+				margin-top: 40px;
 				.logo{
 					@include column(2, true);
 					img{
@@ -314,7 +314,7 @@ a{
 		width: 690px;
 	}
 }
-.form-txt{
+.top-txt{
 	margin-top: 40px;
 	p{
 	    color: #4D4D4F;
@@ -423,7 +423,7 @@ form{
 //team list rules
 .team{
 	@include column(24);
-	margin-top: 60px;
+	margin-top: 40px;
 	.employees li{
 		@include inline-block;
 		margin: 15px 29px 0 0;
