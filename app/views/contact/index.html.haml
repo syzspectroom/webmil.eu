@@ -11,12 +11,10 @@
             %p 76000 Ukraine
             %p Ivano-Frankivs&#8217;k
           .street{itemprop: "streetAddress"}
-            %p Sichovyh Strilciv Street, 31
+            %p Sichovyh Strilciv Street, 34
           %h2.phone Phone:
           .tel
             %p{itemprop: "telephone"} +38 0342 735 448
-            %p{itemprop: "telephone"} +38 094 922 8448
-            %p{itemprop: "telephone"} +38 063 757 0020
           %h2.on-line On-line:
           .skype
             %p
@@ -60,7 +58,7 @@
             ];
     map.setOptions({styles: pinkParksStyles});
         var geocoder = new google.maps.Geocoder();
-        geocoder.geocode( { 'address': 'Івано-Франківськ, Січових Стрільців 30'}, function(results, status){
+        geocoder.geocode( { 'address': 'Івано-Франківськ, Січових Стрільців 34'}, function(results, status){
             if (status == google.maps.GeocoderStatus.OK){
                 map.setCenter(results[0].geometry.location);
                 var conf ={
