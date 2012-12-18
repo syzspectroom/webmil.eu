@@ -5,6 +5,8 @@
 				=@work.name
 				= link_to '← back', works_path, class: 'link'
 			= link_to @work.url, @work.full_url
+			-unless @work.tag.empty?
+				%p=@work.tag
 			.description
 				%p
 					=@work.description

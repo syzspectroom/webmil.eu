@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120628125550) do
+ActiveRecord::Schema.define(:version => 20121218211345) do
 
   create_table "pictures", :force => true do |t|
     t.string   "image"
@@ -59,8 +59,10 @@ ActiveRecord::Schema.define(:version => 20120628125550) do
     t.string   "short_description"
     t.string   "description"
     t.string   "slug"
-    t.datetime "created_at",        :null => false
-    t.datetime "updated_at",        :null => false
+    t.datetime "created_at",                                       :null => false
+    t.datetime "updated_at",                                       :null => false
+    t.decimal  "order",             :precision => 10, :scale => 0
+    t.string   "tag"
   end
 
   add_index "works", ["slug"], :name => "index_works_on_slug", :unique => true
