@@ -1,7 +1,11 @@
 .container
-  .top-txt
-    %p Webmil is inspirational digital web agency. We are young yet experienced and work-eager people, who are quite aware of how to make your project’s effectiveness sky-rocket. In the world of ideas, we persistently keep up to the quality-oriented, and therefore the client-oriented philosophy.
   %section
+    %article
+      .about
+        .logo
+          =image_tag('11.png', alt: '', style: 'float: left;')
+        .desc
+          Webmil is inspirational digital web agency. We are young yet experienced and work-eager people, who are quite aware of how to make your project’s effectiveness sky-rocket. In the world of ideas, we persistently keep up to the quality-oriented, and therefore the client-oriented philosophy.  
     %article
       .design
         .logo
@@ -12,7 +16,7 @@
     %article
       .development
         .logo
-          =image_tag('development.png', alt: 'Design')
+          =image_tag('development.png', alt: 'Development')
         .desc
           %h2 Development
           %p Transforming concepts and ideas into solid product was the backbone of our work for many years. Every product needs reliable code. We are proficient in a variety of programming languages and technologies. Most of all we like Symfony 2 and Ruby on Rails.​ Multiple code reviews, immediate reaction on changes in project plus tight cooperation with client ensure maximum perfected outcome.
@@ -30,69 +34,5 @@
         .desc
           %h2 Code Quality
           %p Sound software is undoubtedly our major care. For it to be well-tailored, reliable code is of first priority. Apparently, the main objective of our software-making work is to produce code of the best quality, that not only functions smoothly at the time being, but is flexible enough to be updated and applicable with new purposes.
-/   %section
-/     .statistics
-/       .statistics-heading
-/         .logo
-/           =image_tag('statistics.png', alt: 'Statistics')
-/         .desc
-/           %h2 Webmil statistics
-/ .border
-/   .container
-/     .statistic-hours
-/       %ul
-/         %li.hours-office
-/           %h3 196778
-/           %p hours killed at the office
-/         %li.corp-emails
-/           %h3 1298
-/           %p corporate emails
-/         %li.hours-music
-/           %h3 56803
-/           %p hours of listening music
-/     .frameworks
-/       %h3 Frameworks used:
-/       %ul
-/         %li
-/           %p.percent 12%
-/           %p YII
-/         %li
-/           %p.percent 5%
-/           %p Zend
-/         %li
-/           %p.percent 46%
-/           %p Sympfony
-/         %li
-/           %p.percent 15%
-/           %p Sympfony 2
-/         %li
-/           %p.percent 6%
-/           %p Codeigniter
-/       %p.desc We use programming best practices and write a clean code. After we deliver your project, you can hire anyone to maintain it. It would take them literally minutes to understand our code. Of course we would be happy to maintain the project for you in a long run.
-/     .energy-resources
-/       %h3 Energy resources used:
-/       .authentic
-/         %p do not perceive this information as 100% authentic
-/       %ul
-/         %li.beer
-/           .txt
-/             %h3 236
-/             %p bottles of Beer
-/         %li.coffee
-/           .txt
-/             %h3 1865
-/             %p cups of Coffee
-/         %li.tea
-/           .txt
-/             %h3 3865
-/             %p cups of tee
-/         %li.bananas
-/           .txt
-/             %h3 345
-/             %p bananas
-/         %li.cookies
-/           .txt
-/             %h3 95
-/             %p kilo of Cookies
 .container
   = render 'pages/clients'

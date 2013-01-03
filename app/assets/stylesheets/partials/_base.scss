@@ -57,7 +57,7 @@ a{
 .container{
 	section{
 		article{
-			.design, .development, .complex-websites, .code-quality{
+			.about, .design, .development, .complex-websites, .code-quality{
 				@include column(12);
 				margin-top: 40px;
 				.logo{
@@ -71,6 +71,16 @@ a{
 					p{
 						margin: 15px 0 0 0;
 						width: 400px;
+					}
+				}
+			}
+			.about{
+				@include column(24);
+				.desc{
+					@include column(22);
+					p{
+						@include column(22);	
+						margin: 15px 0 0 0;
 					}
 				}
 			}
