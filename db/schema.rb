@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121218211345) do
+ActiveRecord::Schema.define(:version => 20130104191632) do
 
   create_table "pictures", :force => true do |t|
     t.string   "image"
@@ -57,11 +57,11 @@ ActiveRecord::Schema.define(:version => 20121218211345) do
     t.string   "url"
     t.string   "main_image"
     t.string   "short_description"
-    t.string   "description"
+    t.string   "description",       :limit => 1000
     t.string   "slug"
-    t.datetime "created_at",                                       :null => false
-    t.datetime "updated_at",                                       :null => false
-    t.decimal  "order",             :precision => 10, :scale => 0
+    t.datetime "created_at",                                                       :null => false
+    t.datetime "updated_at",                                                       :null => false
+    t.decimal  "order",                             :precision => 10, :scale => 0
     t.string   "tag"
   end
 

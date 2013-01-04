@@ -25,7 +25,7 @@ end
 #  url               :string(255)
 #  main_image        :string(255)
 #  short_description :string(255)
-#  description       :string(255)
+#  description       :string(1000)
 #  slug              :string(255)
 #  created_at        :datetime        not null
 #  updated_at        :datetime        not null
