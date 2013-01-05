@@ -171,6 +171,7 @@ GEM
     rdoc (3.12)
       json (~> 1.4)
     remotipart (1.0.2)
+    rmagick (2.13.1)
     rspec (2.10.0)
       rspec-core (~> 2.10.0)
       rspec-expectations (~> 2.10.0)
@@ -241,6 +242,7 @@ DEPENDENCIES
   mysql2
   rails (= 3.2.5)
   rails_admin
+  rmagick
   rspec-rails (>= 2.8.1)
   sass-rails (~> 3.2.4)
   therubyracer
