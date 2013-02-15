@@ -31,7 +31,7 @@ ssh_options[:forward_agent] = true
 
 # Имя вашего проекта в панели управления.
 # Не меняйте это значение без необходимости, оно используется дальше.
-set :application,     "webmileu"
+set :application,     "webmilcomua"
 
 # Сервер размещения проекта.
 set :deploy_server,   "neon.locum.ru"
@@ -71,6 +71,7 @@ set :scm,             :git
 
 ## Если ваш репозиторий в GitHub, используйте такую конфигурацию
 set :repository,    "git://github.com/syzspectroom/webmil.eu.git"
+set :branch, "ukrainian-version"
 
 ## Чтобы не хранить database.yml в системе контроля версий, поместите
 ## dayabase.yml в shared-каталог проекта на сервере и раскомментируйте
