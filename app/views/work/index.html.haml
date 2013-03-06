@@ -3,13 +3,13 @@
 
     - @works.each do |work|
       %li.box.bwWrapper
-        %figure         
+        %figure
           = link_to image_tag(work.main_image, alt: work.short_description), work_path(work.slug)
           %figcaption
             %div{class:"work-short-desc color-#{1+rand(4)}"}
               %p
                 = link_to work.name, work_path(work.slug)
-              = link_to work.url, work.full_url, class: 'link'
+              = link_to work.url, work.full_url, class: 'link', target: '_blank'
 
 .clearfix
 
