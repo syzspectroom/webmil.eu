@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130104191632) do
+ActiveRecord::Schema.define(:version => 20130725142738) do
 
   create_table "pictures", :force => true do |t|
     t.string   "image"
@@ -27,7 +27,7 @@ ActiveRecord::Schema.define(:version => 20130104191632) do
     t.integer  "item"
     t.string   "table"
     t.integer  "month",      :limit => 2
-    t.integer  "year",       :limit => 8
+    t.integer  "year",       :limit => 5
     t.datetime "created_at",              :null => false
     t.datetime "updated_at",              :null => false
   end
@@ -53,16 +53,19 @@ ActiveRecord::Schema.define(:version => 20130104191632) do
   add_index "users", ["reset_password_token"], :name => "index_users_on_reset_password_token", :unique => true
 
   create_table "works", :force => true do |t|
-    t.string   "name"
+    t.string   "name_en"
     t.string   "url"
     t.string   "main_image"
-    t.string   "short_description"
-    t.string   "description",       :limit => 1000
+    t.string   "short_description_en"
+    t.string   "description_en",       :limit => 1000
     t.string   "slug"
-    t.datetime "created_at",                                                       :null => false
-    t.datetime "updated_at",                                                       :null => false
-    t.decimal  "order",                             :precision => 10, :scale => 0
+    t.datetime "created_at",                           :null => false
+    t.datetime "updated_at",                           :null => false
+    t.decimal  "order"
     t.string   "tag"
+    t.string   "name_uk"
+    t.text     "description_uk"
+    t.string   "short_description_uk"
   end
 
   add_index "works", ["slug"], :name => "index_works_on_slug", :unique => true

@@ -82,11 +82,11 @@ RailsAdmin.config do |config|
   # config.model Picture do
   #   # Found associations:
   #   # Found columns:
-  #     configure :id, :integer 
-  #     configure :image, :string 
-  #     configure :title, :string 
-  #     configure :works_id, :integer 
-  #     configure :created_at, :datetime 
+  #     configure :id, :integer
+  #     configure :image, :string
+  #     configure :title, :string
+  #     configure :works_id, :integer
+  #     configure :created_at, :datetime
   #     configure :updated_at, :datetime   #   # Sections:
   #   list do; end
   #   export do; end
@@ -98,15 +98,15 @@ RailsAdmin.config do |config|
   # config.model Work do
   #   # Found associations:
   #   # Found columns:
-  #     configure :id, :integer 
-  #     configure :name, :string 
-  #     configure :url, :string 
-  #     configure :main_image, :string 
-  #     configure :short_description, :text 
-  #     configure :description, :text 
-  #     configure :show_on_main_page, :boolean 
-  #     configure :slug, :string 
-  #     configure :created_at, :datetime 
+  #     configure :id, :integer
+  #     configure :name, :string
+  #     configure :url, :string
+  #     configure :main_image, :string
+  #     configure :short_description, :text
+  #     configure :description, :text
+  #     configure :show_on_main_page, :boolean
+  #     configure :slug, :string
+  #     configure :created_at, :datetime
   #     configure :updated_at, :datetime   #   # Sections:
   #   list do; end
   #   export do; end

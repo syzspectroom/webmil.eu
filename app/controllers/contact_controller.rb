@@ -1,20 +1,25 @@
 
 class ContactController < ApplicationController
+  before_filter :set_title
+
   def index
-    @page_title = '- Contacts'
     @message = Message.new
   end
 
   def create
-    @page_title = '- Contacts'
     @message = Message.new(params[:message])
-    
+
     if @message.valid?
       NotificationsMailer.new_message(@message).deliver
-      redirect_to(contacts_path, notice: "Message was successfully sent.")
+      redirect_to(contacts_path, notice: t(:message_was_sent))
     else
-      flash.now.alert = "Please fill all fields."
+      flash.now.alert = t(:fill_all_fields)
       render :index
     end
-  end 
+  end
+
+  private
+    def set_title
+      @page_title = '- ' + t(:contacts)
+    end
 end

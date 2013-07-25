@@ -1,7 +1,7 @@
 
 class WorkController < ApplicationController
   def index
-   @page_title = '- Works'
+   @page_title = '- ' + t(:works)
    @works = Work.order("`order` desc").all
 
   end

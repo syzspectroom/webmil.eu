@@ -1,34 +1,34 @@
 .container
   .top-txt
-    %h2 Contact us:
-    %p Webmil is always open to cooperation. We strive to create new startups and projects you need to be done, bringing in something fresh and interesting all the way. We are thirsty for new people who are able to combine clear and logical thinking with bursting creativeness and unfolded imagination. Are you sure you satisfy these requirements, we will be happy to complete our team with another programming-lover.
+    %h2= t(:contact_us_title)
+    %p= t(:description)
   .left-address
     .address{itemscope: true,  itemtype: "http://schema.org/Organization"}
       %meta{itemprop: "name", content: "Webmil"}
         %address{itemscope: true, itemprop: "address" ,itemtype: "http://schema.org/PostalAddress"}
-          %h2.adress Address:
+          %h2.adress= t(:address)
           .locality{itemprop: "addressLocality"}
-            %p 76000 Ukraine
-            %p Ivano-Frankivs&#8217;k
+            %p= t(:address_first_line)
+            %p= raw t(:address_second_line)
           .street{itemprop: "streetAddress"}
-            %p Sichovyh Strilciv Street, 34
-          %h2.phone Phone:
+            %p= t(:address_third_line)
+          %h2.phone= t(:phone)
           .tel
-            %p{itemprop: "telephone"} +38 0342 735 448
-            %p{itemprop: "telephone"} +38 094 922 8448
-            %p{itemprop: "telephone"} +38 097 755 8036
+            %p{itemprop: "telephone"}= t(:contact_phone_main)
+            %p{itemprop: "telephone"}= t(:contact_phone_second)
+            %p{itemprop: "telephone"}= t(:contact_phone_third)
 
-          %h2.on-line On-line:
+          %h2.on-line= t(:on_line)
           .skype
             %p
-              skype:
-              %span webmil.ltd
+              = t(:skype)
+              %span= t(:contact_skype)
           .mail
             %p
-              e-mail:
-              %span{itemprop: "email"} info@webmil.com.ua
+              = t(:e_mail)
+              %span{itemprop: "email"}= t(:contact_email)
   .right-address
-    %h2 How to get:
+    %h2= t(:how_to_get)
     #map
 
 

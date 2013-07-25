@@ -4,35 +4,34 @@
       .about
         .logo
           =image_tag('11.png', alt: '', style: 'float: left;')
-        .desc
-          Webmil is inspirational digital web agency. We are young yet experienced and work-eager people, who are quite aware of how to make your project’s effectiveness sky-rocket. In the world of ideas, we persistently keep up to the quality-oriented, and therefore the client-oriented philosophy.  
+        .desc= t(:main_desc)
     %article
       .design
         .logo
-          =image_tag('design.png', alt: 'Design')
+          =image_tag('design.png', alt: t(:design))
         .desc
-          %h2 Design
-          %p Attention to detail cannot be explained in plain words, but it could be only felt. Even though it merely targets subconsciousness, it also gives birth to motivations and strongly impacts actual decisions. Poor or well-cut, minimized or stuffed, template-like or hypercreative, website design might either attract or repel your visitors. Through years of experience, we’ve got our own simple secret of conceptual versatility. We tend not borrow ideas, instead we generate brand new ideas ourselves. Simple ideas. This proves to give the most sophistication. Simplicity sells.
+          %h2= t(:design)
+          %p= t(:design_desc)
     %article
       .development
         .logo
-          =image_tag('development.png', alt: 'Development')
+          =image_tag('development.png', alt: t(:development))
         .desc
-          %h2 Development
-          %p Transforming concepts and ideas into solid product was the backbone of our work for many years. Every product needs reliable code. We are proficient in a variety of programming languages and technologies. Most of all we like Symfony 2 and Ruby on Rails.​ Multiple code reviews, immediate reaction on changes in project plus tight cooperation with client ensure maximum perfected outcome.
+          %h2= t(:development)
+          %p= t(:development_desc)
     %article
       .complex-websites
         .logo
-          =image_tag('complex-websites.png', alt: 'Complex Web Applications')
+          =image_tag('complex-websites.png', alt: t(:complex_apps))
         .desc
-          %h2 Complex Web Applications
-          %p Alongside with software improvement the very interfaces get way more elaborate too, day by day. Leaflet-likeness of websites is now the matter of the past. Taking a good degree of sophistication for granted, we focus on start-ups and turnkey projects of any type. In other words, we are quite start-up-friendly.
+          %h2= t(:complex_apps)
+          %p= t(:complex_apps_desc)
     %article
       .code-quality
         .logo
-          =image_tag('code-quality.png', alt: 'Code Quality')
+          =image_tag('code-quality.png', alt: t(:code_quality))
         .desc
-          %h2 Code Quality
-          %p Sound software is undoubtedly our major care. For it to be well-tailored, reliable code is of first priority. Apparently, the main objective of our software-making work is to produce code of the best quality, that not only functions smoothly at the time being, but is flexible enough to be updated and applicable with new purposes.
+          %h2= t(:code_quality)
+          %p= t(:code_quality_desc)
 .container
   = render 'pages/clients'

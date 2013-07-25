@@ -1,25 +1,25 @@
 %footer
   .footer-container
     .sitemap
-      %h4 Sitemap
+      %h4= t(:sitemap)
       %ul
         %li
-          = link_to 'home', root_path
-          %p shortly about us
+          = link_to t(:footer_home), root_path
+          %p= t(:footer_home_desc)
         %li
-          = link_to 'works', works_path
-          %p see what we do
+          = link_to t(:footer_works), works_path
+          %p= t(:footer_works_desc)
         %li
-          = link_to 'team', studio_path
-          %p who’s there
+          = link_to t(:footer_team), studio_path
+          %p= t(:footer_team_desc)
         %li
-          = link_to 'contacts', contacts_path
-          %p where we are
+          = link_to t(:footer_contacts), contacts_path
+          %p= t(:footer_contacts_desc)
       .copyright
-        %p © 2009-2012 Webmil lab. All rights reserved.
+        %p= t(:copyright)
 
     .resources
-      %h4 Resources
+      %h4= t(:resources)
       %ul
         %li
           %a{:href => "http://facebook.com/webmileu"} facebook
@@ -28,13 +28,13 @@
         %li
           %a{:href => "https://plus.google.com/105004848481490299912", :rel=>"publisher"} google+
     .address{itemscope: true,  itemtype: "http://schema.org/Organization"}
-      %h4 Get in touch with us
+      %h4= t(:get_in_touch)
       %meta{itemprop: "name", content: "Webmil"}
       %address{itemscope: true, itemprop: "address" ,itemtype: "http://schema.org/PostalAddress"}
-        .tel{itemprop: "telephone"} +380 342 735 448
-        .mail{itemprop: "email"} info@webmil.com.ua
+        .tel{itemprop: "telephone"}= t(:contact_phone_main)
+        .mail{itemprop: "email"}= t(:contact_email)
       %p
-        = link_to 'Map & directions', contacts_path
+        = link_to t(:map_directions), contacts_path
 %script{'type'=> 'text/javascript'}
   :plain
     $(window).load(function(){

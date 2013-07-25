@@ -2,61 +2,60 @@
   %section
     %article
       .top-txt
-        %h2 About us
-        %p
-          Webmil lab has started in 2009. Since then the team has grown to 10 people. We have six developers, two designers, frontend developer and manager. Supporting the view of programming being a pure form of creativity, we place major priority in making projects and services sound and dance. We believe, vast concerns and versatility are what makes a difference in the stereotypical approach to software making.
+        %h2= t(:about_us_header)
+        %p= t(:about_us_desc)
   %section
     .team
-      %h2 Team
+      %h2= t(:team_header)
       %ul.employees
         %li.vcard
-          =image_tag('team/denys.jpg', alt: 'Photo of Denys Kurets', class: 'photo')
-          %p.fn Denys Kurets
-          %p.title Developer
+          =image_tag('team/denys.jpg', alt: t(:denys_photo), class: 'photo')
+          %p.fn= t(:denys)
+          %p.title= t(:developer)
           %span.org Webmil
         %li.vcard
-          =image_tag('team/nikita.jpg', alt: 'Photo of Nikita Grach', class: 'photo')
-          %p.fn Nikita Grach
-          %p.title Designer
+          =image_tag('team/nikita.jpg', alt: t(:nikita_photo), class: 'photo')
+          %p.fn= t(:nikita)
+          %p.title= t(:designer)
           %span.org Webmil
         %li.vcard
-          =image_tag('team/oleg.jpg', alt: 'Photo of Oleg Popadiuk', class: 'photo')
-          %p.fn Oleg Popadiuk
-          %p.title Developer
+          =image_tag('team/oleg.jpg', alt: t(:oleg_photo), class: 'photo')
+          %p.fn= t(:oleg)
+          %p.title= t(:developer)
           %span.org Webmil
         %li.vcard
-          =image_tag('team/roman.jpg', alt: 'Photo of Roman Romanchenko', class: 'photo')
-          %p.fn Roman Romanchenko
-          %p.title Developer
+          =image_tag('team/roman.jpg', alt: t(:roman_photo), class: 'photo')
+          %p.fn= t(:roman)
+          %p.title= t(:developer)
           %span.org Webmil
         %li.vcard
-          =image_tag('team/rostyslav.jpg', alt: 'Photo of Rostyslav Diachok', class: 'photo')
-          %p.fn Rostyslav Diachok
-          %p.title Developer
+          =image_tag('team/rostyslav.jpg', alt: t(:rostyslav_photo), class: 'photo')
+          %p.fn= t(:rostyslav)
+          %p.title= t(:developer)
           %span.org Webmil
         %li.vcard
-          =image_tag('team/sasha.jpg', alt: 'Photo of Oleksandr Lavasov', class: 'photo')
-          %p.fn Oleksandr Lavasov
-          %p.title Developer
+          =image_tag('team/sasha.jpg', alt: t(:sasha_photo), class: 'photo')
+          %p.fn= t(:sasha)
+          %p.title= t(:developer)
           %span.org Webmil
         %li.vcard
-          =image_tag('team/sergij.jpg', alt: 'Photo of Sergij Gnatchuk', class: 'photo')
-          %p.fn Sergij Gnatchuk
-          %p.title Manager
+          =image_tag('team/sergij.jpg', alt: t(:sergij_photo), class: 'photo')
+          %p.fn= t(:sergij)
+          %p.title= t(:manager)
           %span.org Webmil
         %li.vcard
-          =image_tag('team/victor.jpg', alt: 'Photo of Victor Rubych', class: 'photo')
-          %p.fn Victor Rubych
-          %p.title Developer
+          =image_tag('team/victor.jpg', alt: t(:victor_photo), class: 'photo')
+          %p.fn= t(:victor)
+          %p.title= t(:developer)
           %span.org Webmil
         %li.vcard
-          =image_tag('team/yura.png', alt: 'Photo of Yuri Syvak', class: 'photo')
-          %p.fn Yuri Syvak
-          %p.title Designer
+          =image_tag('team/yura.png', alt: t(:yura_s_photo), class: 'photo')
+          %p.fn= t(:yura_s)
+          %p.title= t(:designer)
           %span.org Webmil
         %li.vcard
-          =image_tag('team/yura_.jpg', alt: 'Photo of Yuri Rekechuk', class: 'photo')
-          %p.fn Yuri Rekechuk
-          %p.title Frontend developer
+          =image_tag('team/yura_.jpg', alt: t(:yura_r_photo), class: 'photo')
+          %p.fn= t(:yura_r)
+          %p.title= t(:frontend_developer)
           %span.org Webmil
   = render 'pages/clients'

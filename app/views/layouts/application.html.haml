@@ -15,11 +15,11 @@
 
     /[if lt IE 9]
       = javascript_include_tag 'http://html5shiv.googlecode.com/svn/trunk/html5.js'
-    = javascript_include_tag 'http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js' 
-    = javascript_include_tag 'http://maps.googleapis.com/maps/api/js?sensor=false' 
-    = javascript_include_tag 'jQuery.BlackAndWhite.min.js' 
-    = javascript_include_tag 'jquery.masonry.min.js' 
-    = javascript_include_tag 'center.js' 
+    = javascript_include_tag 'http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js'
+    = javascript_include_tag 'http://maps.googleapis.com/maps/api/js?sensor=false'
+    = javascript_include_tag 'jQuery.BlackAndWhite.min.js'
+    = javascript_include_tag 'jquery.masonry.min.js'
+    = javascript_include_tag 'center.js'
     <link href="https://plus.google.com/105004848481490299912" rel="publisher" />
   %body
     .wrap
@@ -33,14 +33,13 @@
             /     %li
             /       %a.ua{href: '#'} ua
             .slogan
-              = image_tag('slogan.png', alt: 'We are web development rock stars')
+              = image_tag(t(:slogan_img), alt: t(:slogan))
             = render 'layouts/navigation'
             .menu
           .logo
             = link_to image_tag('logo.png', alt: 'Webmil'), root_path
-      
+
       =yield
 
       .footer-push
     = render 'layouts/footer'
-        
