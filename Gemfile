@@ -28,6 +28,7 @@ gem "email_spec", ">= 1.2.1", :group => :test
 gem "webrat", group: :test
 
 gem 'annotate', '~> 2.4.1.beta', group: :development
+gem "therubyracer", ">= 0.11.4"
 
 gem 'carrierwave'
 gem 'mini_magick'
@@ -48,7 +49,6 @@ gem 'unicorn'
 # gem 'debugger'
 gem 'execjs'
 
-gem 'therubyracer'
 
 
 gem "devise"
