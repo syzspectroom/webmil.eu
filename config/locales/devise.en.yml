@@ -1,8 +1,6 @@
 # Additional translations at https://github.com/plataformatec/devise/wiki/I18n
 
 en:
-  home:
-    name: 'name'
   errors:
     messages:
       expired: "has expired, please request a new one"
