@@ -1,5 +1,4 @@
-
-class ContactController < ApplicationController
+class ContactController < FrontendController
   before_filter :set_title
 
   def index
@@ -20,6 +19,6 @@ class ContactController < ApplicationController
 
   private
     def set_title
-      @page_title = '- ' + t(:contacts)
+      @page_title = "- #{t(:contacts)}"
     end
 end

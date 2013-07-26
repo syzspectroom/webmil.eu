@@ -6,3 +6,11 @@ uk:
   works: "Роботи"
   studio: "Студія"
   contacts: "Контакти"
+  fill_all_fields: "Заповніть всі поля."
+  message_was_sent: "Повідомлення успішно відправлене."
+  back: '← назад'
+  contact_email: 'info@webmil.com.ua'
+  contact_skype: 'webmil.ltd'
+  contact_phone_main: '+380 342 735 448'
+  contact_phone_second: '+38 094 922 8448'
+  contact_phone_third: '+38 097 755 8036'

@@ -15,15 +15,15 @@ class Work < ActiveRecord::Base
   validates :url, presence: true
 
   def name
-    self.send "name_#{I18n.locale}"
+    self.send("name_#{I18n.locale}") || self.name_en
   end
 
   def description
-    self.send "description_#{I18n.locale}"
+    self.send("description_#{I18n.locale}") || self.description_en
   end
 
   def short_description
-    self.send "short_description_#{I18n.locale}"
+    self.send("short_description_#{I18n.locale}") || self.short_description_en
   end
 
   def full_url
