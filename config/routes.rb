@@ -16,6 +16,16 @@ WebmilEu::Application.routes.draw do
 
   match '/studio', to: 'pages#studio'
 
+  #old routes fix
+  match '/uk/index.html', to: redirect('http://webmil.com.ua')
+  match '/uk/services.html', to: redirect('http://webmil.com.ua/studio')
+  match '/uk/portfolio.html', to: redirect('http://webmil.com.ua/works')
+  match '/uk/studio.html', to: redirect('http://webmil.com.ua/contacts')
+
+  match '/en/index.html', to: redirect('http://webmil.eu')
+  match '/en/services.html', to: redirect('http://webmil.eu/studio')
+  match '/en/portfolio.html', to: redirect('http://webmil.eu/works')
+  match '/en/studio.html', to: redirect('http://webmil.eu/contacts')
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

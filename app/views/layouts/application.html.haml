@@ -5,8 +5,7 @@
     %meta{name: "viewport", content: "width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"}
     %title Webmil #{@page_title}
     = stylesheet_link_tag 'screen', media: 'screen'
-    = stylesheet_link_tag 'mobile', media: 'screen and (max-width: 330px)'
-    = stylesheet_link_tag 'mobile', media: 'screen and (max-device-width: 330px)'
+    = stylesheet_link_tag 'mobile', media: 'screen and (max-width: 330px),screen and (max-device-width: 330px)'
     = stylesheet_link_tag 'print', media: 'print'
 
     = stylesheet_link_tag 'http://fonts.googleapis.com/css?family=PT+Sans|PT+Sans+Narrow&subset=latin,cyrillic'
